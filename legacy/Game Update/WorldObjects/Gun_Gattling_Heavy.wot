@@ -1,0 +1,99 @@
+Type String 'Gun_Gattling_Heavy'
+00000005 ConstData
+{
+	HasPhysics String ''
+	HasCollision String ''
+	HasRender String 'Gun_Gattling_Heavy'
+	HasAI String 'Gun_Gattling_Heavy'
+	HasCustomInfo String 'Gun_Gattling_Heavy'
+}
+Definition String 'AIENTITYDEFINITION'
+EntityType String 'Gun_Gattling_Heavy'
+FactoryType String 'GunAI'
+00000004 ConstData
+{
+	Is Lobbing Gun Bool False 
+	Is MineLaying Gun Bool False 
+	Is TorpedoLauncher Gun Bool False 
+	Is PointDefense Gun Bool False 
+}
+Definition String 'RENDERENTITYDEFINITION'
+EntityType String 'Gun_Gattling_Heavy'
+FactoryType String 'RenderEntityFactory'
+00000031 ConstData
+{
+	Distant Bool False 
+	Mesh Scene Name String 'GattlingGunLight'
+	Render Effect String 'mesh'
+	Visible Bool True
+	00000023 Mesh Attribute Manager
+	{
+		MeshAttributes - Size Int 2
+		00000008 MeshAttributes - Element
+		{
+			MeshName String 'MuzzleNode0'
+			MeshAttribute - Size Int 1
+			00000003 MeshAttribute - Element
+			{
+				AttributeName String 'GunMuzzlePlacement'
+				DescriptorName String 'Gatling_muzzle'
+				AssociationName String ''
+			}
+		}
+		00000008 MeshAttributes - Element
+		{
+			MeshName String 'Gattlinggun_Layer2'
+			MeshAttribute - Size Int 1
+			00000003 MeshAttribute - Element
+			{
+				AttributeName String 'GunVerticalPivotPlacement'
+				DescriptorName String 'Vertical_Pivot_Point'
+				AssociationName String ''
+			}
+		}
+	}
+	ROTATIONSPEED Float 0.000000
+}
+Definition String 'PHYSICSDEFINITION'
+EntityType String ''
+Definition String 'COLLISIONDEFINITION'
+EntityType String ''
+Definition String 'CUSTOMINFODEFINITION'
+EntityType String 'Gun_Gattling_Heavy'
+FactoryType String 'GunCustomInfoFactory'
+00000033 ConstData
+{
+	BulletTypeName_Primary String 'Bullet_GattlingHeavy'
+	BulletTypeName_Secondary String 'NoBulletType'
+	SoundName String 'Weapon_Cannon_FireSmall'
+	MuzzleFlashEffect String 'CannonBall_Light_Muzzle'
+	MuzzleSpeed Float 70.000000
+	DuringBurstReloadTime Float 0.120000
+	BulletsPerBurst Int 8
+	TimeBetweenBursts Float 11.000000
+	CalculateAccuracyDeviationDuringBurst Bool True
+	WeaponBar Icon Texture String 'WeaponBar_GunIcon_GattlingGun'
+	VerticalRotationSpeed Float 1.570796
+	HorizontalRotationSpeed Float 1.570796
+	VerticalMinAngle Float -0.785049
+	VerticalMaxAngle Float 1.550027
+	LobAngle Float 0.000000
+	MaximumRange_Range Float 210.000000
+	LongRange_Range Float 165.000000
+	EffectiveRange_Range Float 130.000000
+	BulletAffectedByGravity Bool True
+	MaximumRange_AccuracyDeviation Float 0.191812
+	LongRange_AccuracyDeviation Float 0.122173
+	EffectiveRange_AccuracyDeviation Float 0.049916
+	MaximumRange_RicochetFactor Float -10.000000
+	LongRange_RicochetFactor Float -10.000000
+	EffectiveRange_RicochetFactor Float -10.000000
+	Victory Point Cost Int 8
+	Gun Name String ID String 'IDGS_TPGUNDISPLAYEDNAME_GATTLINGHEAVY'
+	Mount Type String 'Heavy  Mount'
+	Exclusion Race String 'None'
+	Can Be Fired While Cloaked Bool True
+	Firing Crew Alert String 'GUNNER_FIRE'
+	SoundMaxDistance Float 290.000000
+	SoundVolume Float 0.900000
+}

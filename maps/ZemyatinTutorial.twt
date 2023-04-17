@@ -1,0 +1,1262 @@
+# (c) BaRkiNg DOG studios 2002	<-- Copyright Info
+00000020 WorldInfo	<-- Number of lines between brackets. MUST be exact for this section!
+{
+	IsMultiplayerMap Bool True	<-- True for Skirmish Map, False for Campaign Map
+	MustAssembleFleet Bool True	<-- True for Open Map, False for Historical Map
+	World Description String 'IDGS_TPWORLDDESCRIPTION_MP_ARENA_SMALL'	<-- Map name string, located in Strings folder
+	WorldNameID String 'IDGS_TPWORLDNAMES_MP_ARENA_SMALL'			<-- Map description string
+	Object Count Int 14	<-- Number of objects in the map
+	Team List - Size Int 0	<-- Number of teams in the map (I.E. Navy, Proc). Free-for-all maps need no teams
+	Number of Players Int 4	<-- Number of players in the map. Not including NPC factions
+	PlayerInfo - Player Name String 'New Player ( 1 )'	<-- Player 0 Name
+	PlayerInfo - TeamIndex Int -1				<-- Team ID number. -1 is for free for all
+	PlayerInfo - Player Name String 'New Player ( 2 )'	<-- Player 1 Name
+	PlayerInfo - TeamIndex Int -1
+	PlayerInfo - Player Name String 'New Player ( 3 )'	<-- Player 2 Name
+	PlayerInfo - TeamIndex Int -1
+	PlayerInfo - Player Name String 'New Player ( 4 )'	<-- Player 3 Name
+	PlayerInfo - TeamIndex Int -1
+	IsCampaign Bool False 		<-- True for Campaign Map, False for Skirmish Map
+	Use Custom World Name Bool False 	<-- If true, will use a custom map name instead of the map name string (this is not used inside the lobby)
+	Custom World Name String ''		<-- Map name goes between ' '
+	Use Custom World Description Bool False <-- If true, will use a custom map description instead of the description string
+	Custom World Description String ''	<-- Description goes between ' '
+}
+00000008 Game
+{
+	00000002 Time
+	{
+		Game Tick Int 0
+		Game Time Double 0
+	}
+	Frame Int -1
+	Paused Bool False 
+	ActivePlayerIndex Int -1
+}
+00000636 World		<-- Number of lines between brackets does not need to be exact. Just larger than the actual number of lines
+{
+	WorldName String 'Zemyatin'
+	Random Seed Int 0
+	World Size - Min Vector3( -1750.000000, -1750.000000, -500.000000 )	<-- Southwestern most point of map. Locations are in X, Y, Z axis. +X being East, -X being West, +Y being North, -Y being South, and Z being up and down.
+	World Size - Max Vector3( 1750.000000, 1750.000000, 500.000000 )	<-- Northeastern most point of map
+	# Player List
+	PlayerList Int 5	<-- Number of players, including NPCs
+	00000032 Player
+	{
+		Name String 'New Player ( 1 )'	<-- Player 0 name
+		Color Colour( 0.000000, 0.502000, 0.502000, 1.000000 )	<-- Player 0 color. First is amount of red, second is amount of blue, third is amount of green, fourth is the transparency
+		IsPlayable Bool True	<-- Is player or NPC
+		Is Used In Game Bool False 
+		Multiplayer Name String ''
+		StartPoint Vector3( -285.838501, 232.972351, 0.000000 )	<-- Starting location
+		StartPointForwardVector Vector3( 0.396998, -0.917820, 0.000000 )	<-- Starting direction
+		Race Int 4	<-- Race ID. 4 for any, 0 for Navy, 2 for Pirate, 3 for Procyon
+		Points Float 0.000000
+		TeamIndex Int -1	<-- Team ID number.
+		FormationType Int 2	<-- Formation Type. 2 is side-by-side, 0 is in line, 6 is in "V", and 0 is when fleets are scattered in Historical maps
+		00000017 FleetAI
+		{
+			00000001 UPDATETIMER
+			{
+				StartTime Double 0
+			}
+			00000001 OFFSETTIMER
+			{
+				StartTime Double 0
+			}
+			OFFSETTIME Float 0.062500
+			UPDATETIME Float 0.500000
+			00000001 FORMATION
+			{
+				FORMATIONTYPE String 'None'
+			}
+			SHIPINFO - Size Int 0
+			HOLDFIREACTIVE Bool False 
+			AITYPE String 'AIFLEET'
+		}
+		FlagIndex Int 0
+	}
+	00000032 Player
+	{
+		Name String 'New Player ( 2 )'	<-- Player 1
+		Color Colour( 0.000000, 0.000000, 1.000000, 1.000000 )
+		IsPlayable Bool True
+		Is Used In Game Bool False 
+		Multiplayer Name String ''
+		StartPoint Vector3( 304.950317, 289.509827, 0.000000 )
+		StartPointForwardVector Vector3( -0.793376, -0.608732, -0.000001 )
+		Race Int 4
+		Points Float 0.000000
+		TeamIndex Int -1
+		FormationType Int 2
+		00000017 FleetAI
+		{
+			00000001 UPDATETIMER
+			{
+				StartTime Double 0
+			}
+			00000001 OFFSETTIMER
+			{
+				StartTime Double 0
+			}
+			OFFSETTIME Float 0.062500
+			UPDATETIME Float 0.500000
+			00000001 FORMATION
+			{
+				FORMATIONTYPE String 'None'
+			}
+			SHIPINFO - Size Int 0
+			HOLDFIREACTIVE Bool False 
+			AITYPE String 'AIFLEET'
+		}
+		FlagIndex Int 0
+	}
+	00000032 Player
+	{
+		Name String 'New Player ( 3 )'	<-- Player 2
+		Color Colour( 0.502000, 0.502000, 0.000000, 1.000000 )
+		IsPlayable Bool True
+		Is Used In Game Bool False 
+		Multiplayer Name String ''
+		StartPoint Vector3( 284.309814, -284.896027, 0.000000 )
+		StartPointForwardVector Vector3( -0.755651, 0.654975, 0.000000 )
+		Race Int 4
+		Points Float 0.000000
+		TeamIndex Int -1
+		FormationType Int 2
+		00000017 FleetAI
+		{
+			00000001 UPDATETIMER
+			{
+				StartTime Double 0
+			}
+			00000001 OFFSETTIMER
+			{
+				StartTime Double 0
+			}
+			OFFSETTIME Float 0.062500
+			UPDATETIME Float 0.500000
+			00000001 FORMATION
+			{
+				FORMATIONTYPE String 'None'
+			}
+			SHIPINFO - Size Int 0
+			HOLDFIREACTIVE Bool False 
+			AITYPE String 'AIFLEET'
+		}
+		FlagIndex Int 0
+	}
+	00000032 Player
+	{
+		Name String 'New Player ( 4 )'	<-- Player 3
+		Color Colour( 1.000000, 1.000000, 0.000000, 1.000000 )
+		IsPlayable Bool True
+		Is Used In Game Bool False 
+		Multiplayer Name String ''
+		StartPoint Vector3( -281.171387, -377.881714, 0.000000 )
+		StartPointForwardVector Vector3( 0.753918, 0.656969, 0.000000 )
+		Race Int 4
+		Points Float 0.000000
+		TeamIndex Int -1
+		FormationType Int 2
+		00000017 FleetAI
+		{
+			00000001 UPDATETIMER
+			{
+				StartTime Double 0
+			}
+			00000001 OFFSETTIMER
+			{
+				StartTime Double 0
+			}
+			OFFSETTIME Float 0.062500
+			UPDATETIME Float 0.500000
+			00000001 FORMATION
+			{
+				FORMATIONTYPE String 'None'
+			}
+			SHIPINFO - Size Int 0
+			HOLDFIREACTIVE Bool False 
+			AITYPE String 'AIFLEET'
+		}
+		FlagIndex Int 0
+	}
+	00000032 Player
+	{
+		Name String 'ASTEROIDS'	<-- Player 4
+		Color Colour( 0.000000, 0.000000, 0.000000, 0.000000 )
+		IsPlayable Bool False 	<-- Player is NPC
+		Is Used In Game Bool False 
+		Multiplayer Name String ''
+		StartPoint Vector3( -145.180603, -362.535156, 0.000000 )
+		StartPointForwardVector Vector3( 1.000000, 0.000000, 0.000000 )
+		Race Int 4	<-- Player has no race
+		Points Float 0.000000
+		TeamIndex Int -1
+		FormationType Int 0
+		00000017 FleetAI
+		{
+			00000001 UPDATETIMER
+			{
+				StartTime Double 0
+			}
+			00000001 OFFSETTIMER
+			{
+				StartTime Double 0
+			}
+			OFFSETTIME Float 0.062500
+			UPDATETIME Float 0.500000
+			00000001 FORMATION
+			{
+				FORMATIONTYPE String 'None'
+			}
+			SHIPINFO - Size Int 0
+			HOLDFIREACTIVE Bool False 
+			AITYPE String 'AIFLEET'
+		}
+		FlagIndex Int 0
+	}
+	NextID Int 14	<-- Number of objects in map
+	# World Object List
+	WorldObjects Int 14	<-- ID of last object
+	ID Int 1	<-- Object ID Number
+	Type String 'Terrain_BlackHole_Small'	<-- What the object is
+	00000014 State
+	{
+		HasState Bool False 
+		Position Vector3( 1.800463, -2.546509, 0.000000 )	<-- Object location
+		Orientation Matrix33( 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000 )	<-- Object orientation
+		PlayerIndex Int -1	<-- Player ID number
+		# AIEntity
+		Type String ''
+		# RenderEntity
+		Type String ''
+		# PhysicsEntity
+		Type String ''
+		# CollisionEntity
+		Type String ''
+		# CustomInfoEntity
+		Type String ''
+	}
+	ID Int 2															<
+	Type String 'Asteroid_Large'	<-- ID of asteroid										<
+	00000014 State															<
+	{																<
+		HasState Bool False 													<
+		Position Vector3( 110.438110, 578.839966, 0.000000 )									<
+		Orientation Matrix33( 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000 )	<
+		PlayerIndex Int 4	<-- Asteroid belongs to player 4								<
+		# AIEntity														<
+		Type String ''														<-- Repeat lines per object
+		# RenderEntity														<
+		Type String ''														<
+		# PhysicsEntity														<
+		Type String ''														<
+		# CollisionEntity													<
+		Type String ''														<
+		# CustomInfoEntity													<
+		Type String ''														<
+	}																<
+	ID Int 3
+	Type String 'Asteroid_Med'
+	00000014 State
+	{
+		HasState Bool False 
+		Position Vector3( 553.697266, 339.914276, 0.000000 )
+		Orientation Matrix33( 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000 )
+		PlayerIndex Int 4
+		# AIEntity
+		Type String ''
+		# RenderEntity
+		Type String ''
+		# PhysicsEntity
+		Type String ''
+		# CollisionEntity
+		Type String ''
+		# CustomInfoEntity
+		Type String ''
+	}
+	ID Int 4
+	Type String 'Asteroid_Small'
+	00000014 State
+	{
+		HasState Bool False 
+		Position Vector3( 114.234009, -369.573212, 0.000000 )
+		Orientation Matrix33( 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000 )
+		PlayerIndex Int 4
+		# AIEntity
+		Type String ''
+		# RenderEntity
+		Type String ''
+		# PhysicsEntity
+		Type String ''
+		# CollisionEntity
+		Type String ''
+		# CustomInfoEntity
+		Type String ''
+	}
+	ID Int 5
+	Type String 'Asteroid_Huge'
+	00000014 State
+	{
+		HasState Bool False 
+		Position Vector3( -301.378052, -442.766266, 0.000122 )
+		Orientation Matrix33( 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000 )
+		PlayerIndex Int 4
+		# AIEntity
+		Type String ''
+		# RenderEntity
+		Type String ''
+		# PhysicsEntity
+		Type String ''
+		# CollisionEntity
+		Type String ''
+		# CustomInfoEntity
+		Type String ''
+	}
+	ID Int 6
+	Type String 'Asteroid_Large'
+	00000014 State
+	{
+		HasState Bool False 
+		Position Vector3( -494.459717, 65.156334, 0.000000 )
+		Orientation Matrix33( 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000 )
+		PlayerIndex Int 4
+		# AIEntity
+		Type String ''
+		# RenderEntity
+		Type String ''
+		# PhysicsEntity
+		Type String ''
+		# CollisionEntity
+		Type String ''
+		# CustomInfoEntity
+		Type String ''
+	}
+	ID Int 7
+	Type String 'Asteroid_Med'
+	00000014 State
+	{
+		HasState Bool False 
+		Position Vector3( -236.836731, 556.806885, 0.000000 )
+		Orientation Matrix33( 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000 )
+		PlayerIndex Int 4
+		# AIEntity
+		Type String ''
+		# RenderEntity
+		Type String ''
+		# PhysicsEntity
+		Type String ''
+		# CollisionEntity
+		Type String ''
+		# CustomInfoEntity
+		Type String ''
+	}
+	ID Int 8
+	Type String 'Asteroid_Small'
+	00000014 State
+	{
+		HasState Bool False 
+		Position Vector3( 601.058105, 162.388535, 0.000122 )
+		Orientation Matrix33( 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000 )
+		PlayerIndex Int 4
+		# AIEntity
+		Type String ''
+		# RenderEntity
+		Type String ''
+		# PhysicsEntity
+		Type String ''
+		# CollisionEntity
+		Type String ''
+		# CustomInfoEntity
+		Type String ''
+	}
+	ID Int 9
+	Type String 'Asteroid_Med'
+	00000014 State
+	{
+		HasState Bool False 
+		Position Vector3( 520.669800, -197.040497, 0.000122 )
+		Orientation Matrix33( 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000 )
+		PlayerIndex Int 4
+		# AIEntity
+		Type String ''
+		# RenderEntity
+		Type String ''
+		# PhysicsEntity
+		Type String ''
+		# CollisionEntity
+		Type String ''
+		# CustomInfoEntity
+		Type String ''
+	}
+	ID Int 10
+	Type String 'Asteroid_Large'
+	00000014 State
+	{
+		HasState Bool False 
+		Position Vector3( 33.852783, -304.870331, 0.000000 )
+		Orientation Matrix33( 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000 )
+		PlayerIndex Int 4
+		# AIEntity
+		Type String ''
+		# RenderEntity
+		Type String ''
+		# PhysicsEntity
+		Type String ''
+		# CollisionEntity
+		Type String ''
+		# CustomInfoEntity
+		Type String ''
+	}
+	ID Int 11
+	Type String 'Asteroid_Huge'
+	00000014 State
+	{
+		HasState Bool False 
+		Position Vector3( 49.427979, 355.062073, -0.000122 )
+		Orientation Matrix33( 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000 )
+		PlayerIndex Int 4
+		# AIEntity
+		Type String ''
+		# RenderEntity
+		Type String ''
+		# PhysicsEntity
+		Type String ''
+		# CollisionEntity
+		Type String ''
+		# CustomInfoEntity
+		Type String ''
+	}
+	ID Int 12
+	Type String 'Asteroid_Large'
+	00000014 State
+	{
+		HasState Bool False 
+		Position Vector3( -341.750854, -26.253838, 0.000000 )
+		Orientation Matrix33( 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000 )
+		PlayerIndex Int 4
+		# AIEntity
+		Type String ''
+		# RenderEntity
+		Type String ''
+		# PhysicsEntity
+		Type String ''
+		# CollisionEntity
+		Type String ''
+		# CustomInfoEntity
+		Type String ''
+	}
+	ID Int 13
+	Type String 'Asteroid_Med'
+	00000014 State
+	{
+		HasState Bool False 
+		Position Vector3( 320.705322, 26.710621, 0.000000 )
+		Orientation Matrix33( 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000 )
+		PlayerIndex Int 4
+		# AIEntity
+		Type String ''
+		# RenderEntity
+		Type String ''
+		# PhysicsEntity
+		Type String ''
+		# CollisionEntity
+		Type String ''
+		# CustomInfoEntity
+		Type String ''
+	}
+	ID Int 14	<-- ID of last object
+	Type String 'Asteroid_Small'
+	00000014 State
+	{
+		HasState Bool False 
+		Position Vector3( 487.240601, 94.616951, -0.000122 )
+		Orientation Matrix33( 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000 )
+		PlayerIndex Int 4
+		# AIEntity
+		Type String ''
+		# RenderEntity
+		Type String ''
+		# PhysicsEntity
+		Type String ''
+		# CollisionEntity
+		Type String ''
+		# CustomInfoEntity
+		Type String ''
+	}
+	00000183 GameSpecific
+	{
+		World Description Sting ID String 'IDGS_TPWORLDDESCRIPTION_MP_ARENA_SMALL'
+		World Name Sting ID String 'IDGS_TPWORLDNAMES_MP_ARENA_SMALL'
+		00000001 Effect Event Keeper
+		{
+			NumEffectEventInfoChunks Int 0
+		}
+		Skybox mesh name String 'skybox_08_Layer1'	<-- Name of the skybox			<
+		Ambient Light Colour( 0.101961, 0.101961, 0.101961, 1.000000 )				<
+		Vector for roof light orientation Vector3( 0.501989, 0.145542, -0.852540 )		<-- Best to copy these over from existing maps
+		Hemispherical floor light color Colour( 0.368627, 0.121569, 0.109804, 1.000000 )	<
+		Hemispherical roof light color Colour( 0.909804, 0.894118, 0.756863, 1.000000 )		<
+		World Initialized State Bool False 
+		World Buffer Size Float 500.000000	<-- Size between playable area and off-map
+		Waypoint Path Info Vector - Size Int 1		<-- Number of waypoints (currents, ship routes)
+		00000011 Waypoint Path Info Vector - Element
+		{
+			Waypoint Path Name String 'current1'	<-- Path name (example only)
+			Waypoint Path Points - Size Int 9	<-- Number of points
+			Waypoint Path Points - Element Vector3( 1905.502686, -318.560944, 0.000000 )
+			Waypoint Path Points - Element Vector3( 1558.108887, -575.246765, -0.000244 )
+			Waypoint Path Points - Element Vector3( 1461.133545, -693.172485, 0.000000 )
+			Waypoint Path Points - Element Vector3( 1447.525635, -796.175720, 0.000000 )
+			Waypoint Path Points - Element Vector3( 1445.939575, -926.659058, 0.000000 )
+			Waypoint Path Points - Element Vector3( 1472.539917, -1012.278442, 0.000000 )
+			Waypoint Path Points - Element Vector3( 1526.985352, -1138.624756, 0.000000 )
+			Waypoint Path Points - Element Vector3( 1585.002075, -1232.222534, 0.000000 )
+			Waypoint Path Points - Element Vector3( 1925.516479, -1539.370972, 0.000000 )
+		}
+		World Polygons Vectors - Size Int 1		<-- Number of polygons (nebulas, areas, storms)
+		00000014 World Polygons Vectors - Element
+		{
+			Name String 'nebula'	<-- Polygon name (example only)
+			Points Int 12		<-- Number of points
+			Points Coord( -1408.720459, -573.463379 )
+			Points Coord( -1598.529907, -780.490234 )
+			Points Coord( -1683.587036, -1094.201416 )
+			Points Coord( -1621.452271, -1342.814941 )
+			Points Coord( -1419.707642, -1541.076904 )
+			Points Coord( -1117.325806, -1614.112671 )
+			Points Coord( -839.497192, -1546.266479 )
+			Points Coord( -642.088440, -1343.985107 )
+			Points Coord( -559.019958, -1056.991211 )
+			Points Coord( -627.374329, -809.077881 )
+			Points Coord( -831.248230, -587.424255 )
+			Points Coord( -1115.765381, -499.880890 )
+		}
+		World Point Sets Vector - Size Int 1		<-- Number of point sets (nebula size, fishing spots, camera focus locations)
+		00000014 World Point Sets Vector - Element
+		{
+			Name String 'nebula'			<-- Name of point set
+			World Points - Size Int 1
+			00000009 World Points - Element
+			{
+				World Point Magnitude Float 557.400391	<-- Size of point. Larger number means larger nebula
+				00000005 World Point Basis
+				{
+					Position Vector3( -1119.951660, -1059.027466, 0.000000 )
+					LookAt Vector Length Float 0.000000
+					Orientation - Cross Vector3( 1.000000, 0.000000, 0.000000 )
+					Orientation - Forward Vector3( 0.000000, 1.000000, 0.000000 )
+					Orientation - Up Vector3( 0.000000, 0.000000, 1.000000 )
+				}
+			}
+		}
+		Flag List - Size Int 1			<-- Number of flag identifiers (not flags that attach to ships)
+		00000002 Flag List - Element
+		{
+			Flag Name String 'pirateobjnavy'	<-- Name of flag
+			Flag Value Bool False 			<-- Flag on or off
+		}
+		Timer List - Size Int 1			<-- Number of timers
+		00000006 Timer List - Element
+		{
+			Timer Name String 'timer'	<-- Timer name
+			Timer Status Bool False 
+			00000001 Timer Value Chunk
+			{
+				StartTime Double 622.974
+			}
+		}
+		Speech Event List - Size Int 0
+		PlayerAllianceInfoVector - Size Int 0
+		Team List - Size Int 0
+		Winning Team Int -1
+		Num Groups Int 2	<-- Number of object groups
+		00000003 Group
+		{
+			Name String 'Black Hole'		<-- Group name
+			World Object IDs - Size Int 1		<-- Group contains 1 object
+			World Object IDs - Element Int 1	<-- Object ID number
+		}
+		00000015 Group
+		{
+			Name String 'asteroids'
+			World Object IDs - Size Int 13
+			World Object IDs - Element Int 2
+			World Object IDs - Element Int 3
+			World Object IDs - Element Int 4
+			World Object IDs - Element Int 5
+			World Object IDs - Element Int 6
+			World Object IDs - Element Int 7
+			World Object IDs - Element Int 8
+			World Object IDs - Element Int 9
+			World Object IDs - Element Int 10
+			World Object IDs - Element Int 11
+			World Object IDs - Element Int 12
+			World Object IDs - Element Int 13
+			World Object IDs - Element Int 14
+		}
+		00000057 World Rules	<-- Contains all the rules of the world
+		{
+			Rule List Int 3	<-- Number of rules
+			Rule Name String 'Init World ( Hidden From Designers )'	<-- Name of rule
+			Run Once Bool True	<-- Rule is run once
+			Is Active Bool True
+			NumConditions Int 1	<-- Number of conditions for the action to play
+			00000001 Condition List
+			{
+				Type String 'World Initialize'	<-- Condition is met when game loads in
+			}
+			NumActions Int 1	<-- Number of actions the rule goes through
+			00000003 Action List
+			{
+				Type String 'Set Group/Unit Owner'	<-- Assigns a group to a player's control
+				Group/Unit Name String 'asteroids'	<-- Group to be assigned
+				New Owner String 'ASTEROIDS'		<-- Player to be assigned to
+			}
+			Rule Name String 'END'
+			Run Once Bool True
+			Is Active Bool True
+			NumConditions Int 1
+			00000001 Condition List
+			{
+				Type String 'Skirmish Game Complete'	<-- Condition is met when the the standard skirmish game parameters are met
+			}
+			NumActions Int 1
+			00000005 Action List
+			{
+				Type String 'End Game'					<-- Ends the game
+				Use Custom Message String 'FALSE'			<-- True for custom message, False for standard message
+				Winner - Custom Message String ID String 'GAME STRING'	<-- Custom win message string
+				Loser - Custom Message String ID String 'GAME STRING'	<-- Custom lose message string
+				Show Stats Screen String 'TRUE'
+			}
+			Rule Name String 'setob'
+			Run Once Bool True
+			Is Active Bool True
+			NumConditions Int 1
+			00000001 Condition List
+			{
+				Type String 'World Initialize'			<-- Condition met when game loads in
+			}
+			NumActions Int 2
+			00000003 Action List
+			{
+				Type String 'Set Objective Task Active State'	<-- Sets skirmish objective
+				Objective Task String 'killem'			<-- Objective name
+				Active State String 'TRUE'
+			}
+			00000006 Action List
+			{
+				Type String 'Play Music Track'			<-- Sets the music of the battle
+				File Name String 'BTL_NavyBig_BassnDrums'	<-- Music to be played (see Sound/Music)
+				Crossfade transition String 'TRUE'		<-- Fade or no fade?
+				Fade Out Time ( secs ) Float 2.000000		<-- Fade in time
+				Fade In Time ( secs ) Float 2.000000		<-- Fade out time
+				New Volume ( 0 to 1 ) Float 0.700000		<-- Volume of music
+			}
+			Rule Name String 'Examples of conditions and actions'
+			Run Once Bool True
+			Is Active Bool True
+			NumConditions Int 9
+			00000001 Condition List
+			{
+				Type String 'World Initialize'			<-- Condition met when game loads in
+			}
+			00000004 Condition List
+			{
+				Type String 'Timer Condition'			<-- Condition is met when a timer goes off
+				Timer Name String 'timer'			<-- Timer specified
+				Equivalence String 'Greater Than'		<-- 'Greater Than', 'Less Than', or 'Equal To'
+				Time in seconds Int 300				<-- Timer trigger time in seconds
+			}
+			00000003 Condition List
+			{
+				Type String 'Flag Condition'			<-- Condition is met when a flag is true or false
+				Flag Name String 'navyobjpirate'		<-- Flag specified
+				Boolean Value String 'TRUE'			<-- Activate on 'TRUE' or 'FALSE'
+			}
+			00000005 Condition List
+			{
+				Type String 'Group/Unit Vital Section has >,<,= X damage'	<-- Condition is met when unit is damaged enough
+				Group/Unit Name String 'navy base'				<-- Group or unit specified
+				Vital Section String 'vitalToMission'				<-- 'VitalToMission', 'VitalToShip', 'VitalToManueverability', or 'VitalToMaxVelocity'
+				Equivalence String 'Equal To'					<-- Compare function
+				Damage Percent Float 1.000000					<-- Percentage of damage to trigger
+			}
+			00000004 Condition List
+			{
+				Type String 'Team has captured a ship from Group/Unit'		<-- Condition is met when a unit in group is captured
+				Team Name String 'IDGS_TPTEAMNAMES_PIRATES'			<-- Team that has captured unit
+				Group/Unit String 'navy base'					<-- Group captured unit is from
+				Number Of Captures Int 0
+			}
+			00000004 Condition List
+			{
+				Type String 'Team has destroyed a ship from Group/Unit'		<-- Condition is met when a unit in group is destroyed
+				Team Name String 'IDGS_TPTEAMNAMES_PIRATES'			<-- Team that has destroyed unit
+				Group/Unit String 'COnvoy 1'					<-- Group destroyed ship is from
+				Number Of Ships Destroyed Int 0
+			}
+			00000003 Condition List
+			{
+				Type String 'Team Member Enters Volume'		<-- Condition is met when a ship from the team enters the specified polygon
+				Team Name String 'IDGS_TPTEAMNAMES_PIRATES'
+				Volume Name String 'proc repair area'
+			}
+			00000002 Condition List
+			{
+				Type String 'Team X has no ships'		<-- Condition is met when all ships on a team are eliminated
+				Team Name String 'IDGS_TPTEAMNAMES_PROCYON'	<-- Team specified
+			}
+			00000001 Condition List
+			{
+				Type String 'No Team Has Ships'			<-- Draw condition
+			}
+			NumActions Int 20
+			00000003 Action List
+			{
+				Type String 'Dragon - Set AI Stance'		<-- Sets a stance for the AI
+				Group/Unit Name String 'dragons'		<-- Group or specific unit to apply to
+				AI Stance String 'Stance_Dummy'			<-- Stance for the AI. 'Stance_Dummy' will do nothing. 'Stance_Aggressive' will actively seek and destroy enemies. 'Stance Persistant' will follow action orders exactly and will not go out of its way to attack. 'Stance_Neutral' Will attack only if the unit is targeted.
+			}
+			00000004 Action List
+			{
+				Type String '*State Init* Setup Etherium Current'	<-- Setup for a current
+				World Object ID Int 1					<-- ID of the current
+				Etherium Name String 'New Etherium Current ( 0 )'	<-- Name of the current
+				Etherium Path String 'current1'				<-- Waypoint path of the current
+			}
+			00000009 Action List
+			{
+				Type String 'Setup Asteroid Belt'	<-- Setup for an asteroid belt
+				Group Name String 'Asteroids'		<-- Group of asteroids
+				Path Name String 'asteroid belt'	<-- Path for asteroids to follow
+				Follow Mode String 'loop'		<-- 'loop' for a complete circle. 'teleport loop' for asteroids to teleport to beginning once they've reached the end
+				Find Closest Point String 'TRUE'	<-- Asteroids will find the closest point to start from
+				Velocity Upper m/sec Float 20.000000	<-
+				Velocity Lower m/sec Float 15.000000	<- Asteroid speed
+				Tumble Upper Rads/sec Float 5.000000	<- 
+				Tumble Lower Rads/sec Float 1.000000	<- Asteroid tumble speed
+			}
+			00000020 Action List
+			{
+				Type String '*State Init* Setup Nebula'				<-- Setup for a nebula
+				World Object ID Int 28						<-- ID of the nebula
+				New Nebula Name String 'darkwhorl nebula'			<-- Name of the nebula
+				Polygon Name String 'nebula'					<-- Polygon points name
+				Lightning On/Off String 'FALSE'					<-- Lightning damage on or off
+				Lightning Blast Recharge Time Float 0.000000			<-- Time between lightning blasts
+				Meteors On/Off String 'FALSE'					<-- Meteor storm damage on or off
+				Meteor Strike Recharge Time Float 0.000000			<-- Time between meteor damages
+				Nebula Cloud Effect Name String 'Nebula'			<-- Effect of the nebula. 'Nebula' for a nebula. 'EFFECT' for something else
+				Solar Storm Effect Name String 'EFFECT'				<-- Effect of the nebula. 'SolarStorm' for a storm. 'EFFECT' for something else
+				Meteor Shower Effect Name  String 'EFFECT'			<-- Effect of the nebula. 'MeteorStorm' for a meteor shower. 'EFFECT' for something else
+				Nebula Cloud Point Set Name String 'New Point Set ( 0 )'	<-- Point sets for the nebula. 'POINT SET' if different type.
+				Solar Storm Point Set Name String 'POINT SET'			<-- Point sets for the storm. 'POINT SET' if different type.
+				Meteor Shower Point Set Name String 'POINT SET'			<-- Point sets for the meteors. 'POINT SET' if different type.
+				Rotational Winds On/Off String 'FALSE'				<-- Winds on and off
+				Wind Magnitude Float 0.000000					<-- Power of winds
+				Nebula Cloud Energy Drain On/Off String 'TRUE'			<-- Energy drain on and off
+				Nebula Occlusion On/Off String 'TRUE'				<-- 'TRUE' for unable to see in and out of nebula
+				Solar Storm Wind Damage Frequency Float 0.000000		<-- Time between wind damage
+				Ambient sound max distance Float 0.000000			<-- Distance the sound can be heard
+			}
+			00000011 Action List
+			{
+				Type String '*State Init* Setup Ship'					<--Setup for a ship
+				World Object ID Int 164							<-- ID of the ship
+				Ship Name String 'PSR Neutron Claw'					<-- Name of the ship
+				Ship Path String 'NO PATH'
+				Follow Mode String 'to end'
+				AI Stance String 'Stance_Aggressive'
+				Player/Owner String 'procyon supply fleet'				<-- Player owner of the ship
+				Primary Ship String 'FALSE'						<-- Whether ship is the command ship of player
+				Crew Skill Level String 'Average'					<-- Crew skill of ship. Ranging from 'Green' to 'Average' to 'Elite'
+				Boardable String 'TRUE'							<-- Whether ship can be boarded
+				Localized Ship Name String 'IDGS_TPSHIPNAMEPROCYON00_NEUTRONCLAW'	<-- Banner name of the ship
+			}
+			00000006 Action List
+			{
+				Type String '*State Init* Setup Island'		<-- Setup for a base
+				World Object ID Int 2				<-- ID of the base
+				Combat Strength Int 150				<-- Combat strength (boarding strength) of the base
+				Player/Owner String 'NAVYBASE'			<-- Player owner of the base
+				Gunnery Level String 'Average'			<-- Accuracy of base guns
+				AI Stance String 'Stance_Aggressive'		<-- AI of the base
+			}
+			00000005 Action List
+			{
+				Type String 'Group to follow path'		<-- Ship/animal/nebula will follow path if set to 'Stance_Persistant'
+				Group Name String 'convoy2'
+				Path Name String 'c-route-2'
+				Follow Mode String 'to end'			<-- 'to end' will cause group to follow and stop at the end. 'loop' will cause group to follow in a circle. 'teleport loop' will cause group to teleport to beginning once they've reached the end.
+				Find Closest Point String 'TRUE'
+			}
+			00000003 Action List
+			{
+				Type String 'Set Group Space Objects velocity'	<-- Set velocity of nebula or animals
+				Group Name String 'stormgroup'
+				Velocity Int 10					<-- Speed
+			}
+			00000003 Action List
+			{
+				Type String 'Set Group/Unit Dockable'		<-- Sets a base or tender dockable
+				Group Name String 'navy base'
+				Boolean String 'FALSE'				<-- 'TRUE' to allow docking. 'FALSE' to disable docking
+			}
+			00000003 Action List
+			{
+				Type String 'Set Ships Flag Texture'		<-- Sets the flag of a group or ship
+				Group Name String 'proc base'
+				Flag Texture String 'Flag_Procyon_00.tga'	<-- Flag texture to apply (see BD_FlagTextures)
+			}
+			00000003 Action List
+			{
+				Type String 'Set Lifeboat Creation State'	<-- Toggles lifeboats for a group or ship
+				Group Name String 'COnvoy 1'
+				Boolean String 'TRUE'
+			}
+			00000003 Action List
+			{
+				Type String 'Set Group/Unit Visibility'		<-- Toggle invisibility (Note: Units will still be active while invisible!)
+				Group/Unit Name String 'dragons'		<-- Group or unit to toggle
+				Boolean String 'TRUE'				<-- 'TRUE' for visible, 'FALSE' for invisible
+			}
+			00000003 Action List
+			{
+				Type String 'Set Group/Unit Hold Position'	<-- Toggle ship or group to hold position
+				Group/Unit Name String 'convoy2'
+				Boolean String 'TRUE'
+			}
+			00000003 Action List
+			{
+				Type String 'Set Max Throttle Percent (Max user settable)'	<-- Set max usable speed
+				Group Name String 'COnvoy 1'
+				Throttle Percent Float 0.600000					<-- Percentage of current max speed
+			}
+			00000002 Action List
+			{
+				Type String 'Start Timer'			<-- Starts a timer
+				Timer Name String 'timer'			<-- Timer to be started
+			}
+			00000003 Action List
+			{
+				Type String 'Set Flag Action'			<-- Sets a flag to true or false
+				Flag Name String 'navybasefine'			<-- Flag to be changed
+				Boolean Value String 'FALSE'			<-- 'TRUE' or 'FALSE'
+			}
+			00000003 Action List
+			{
+				Type String 'Grant Team X Points'		<-- Well done, 10 points to Gryffindor!
+				Team Name String 'IDGS_TPTEAMNAMES_PIRATES'
+				Points Int 50
+			}
+			00000003 Action List
+			{
+				Type String 'Set Objective Task Complete State'	<-- Sets an objective to completed
+				Objective Task String 'proc obj'		<-- Objective to complete
+				Complete State String 'TRUE'			<-- 'TRUE' for completed, 'FALSE' to undo
+			}
+			00000003 Action List
+			{
+				Type String 'Set Objective Task Failed State'	<-- Sets an objective to failed
+				Objective Task String 'navy obj3'		<-- Objective to fail
+				Failed State String 'TRUE'			<-- 'TRUE' for failed, 'FALSE' to undo
+			}
+			00000002 Action List
+			{
+				Type String 'Team X Wins'			<-- Self explainatory
+				Team Name String 'IDGS_TPTEAMNAMES_NAVY'	<-- Victorious team
+			}
+		}
+		00000012 Objective System
+		{
+			Current Objective Point Int -1
+			Current Point Visible On StarMap Bool True
+			Objective Point Info - Size Int 1	<-- Location of objective (example only)
+			00000002 Objective Point Info - Element
+			{
+				Name String 'navy target'
+				Position Vector3( -540.166260, 1086.544189, 0.000000 )
+			}
+			Objective Task Array - Size Int 1
+			00000005 Objective Task Array - Element
+			{
+				Name String 'killem'	<-- Objective name
+				TextStringID String 'IDGS_TPOBJECTIVES2_MP_DESTROYENEMYSHIPS'	<-- Objective string
+				Active Bool False 
+				Completed Bool False 
+				Failed Bool False 
+			}
+		}
+		00000001 Rope
+		{
+			RopeInfo - Size Int 0
+		}
+		00000001 Grappled Objects
+		{
+			Grappled Objects Info - Size Int 0
+		}
+		00000001 Boarding Actions
+		{
+			Boarding Actions Info - Size Int 0
+		}
+		00000008 Journal Entry
+		{
+			Page Info - Size Int 1
+			00000003 Page Info - Element
+			{
+				TextStringID String 'IDGS_TPSPEECHEVENTSJOURNALS_J01JIM01'
+				SpeechEventFileName String 'J01JIM01'
+				PictureTexture String 'Journal_Mission1_Shot1'
+			}
+			Title StringID String 'IDGS_TPJOURNALSCREEN_DUMMY_TITLE'
+		}
+		00000001 World Map
+		{
+			Backdrop Texture Name String 'Map_Zemyatin'	<-- Displayed map texture
+		}
+		Can Assemble Fleets Bool True
+		World Crew List - Size Int 0
+		World Arms List - Size Int 0
+		00000008 MapText System
+		{
+			MapText Point Info - Size Int 1
+			00000004 MapText Point Info - Element
+			{
+				Name String 'black hole'
+				DisplayedText String 'IDGS_TPMAPTEXTITEMS_MP_ARENA_SMALL'	<-- Text Displayed on map
+				Position Vector3( 1.299599, 4.263611, 0.000000 )		<-- Location of text
+				Visible Bool True
+			}
+		}
+		READAIENTITYCOUNTS Bool False 
+		Journal Music Name String 'GameMusicTemp'
+		PlayEndMovie Bool False 
+		IsCampaign Bool False 
+		Is Alliance Change Allowed Bool True
+		Use Custom World Name Bool False 
+		Custom World Name String ''
+		Use Custom World Description Bool False 
+		Custom World Description String ''
+		Islands Make Sounds Bool True
+		DATA_NEBULA_CAMERA_EFFECT Int 0
+		DATA_NEXT_NEBULA_CAMERA_EFFECT Int 0
+		00000001 DATA_NEBULA_CAMERA_EFFECT_FADE_IN_TIMER
+		{
+			StartTime Double 0
+		}
+		00000001 DATA_NEBULA_CAMERA_EFFECT_SPIN_TIMER
+		{
+			StartTime Double 0
+		}
+	}
+}
+00000304 GameImpl
+{
+	SelectedWorldObjectID Int -1
+	00000006 GameStats
+	{
+		PlayerKillInfo - Size Int 0
+		PlayerDockInfo - Size Int 0
+		PlayerLifeBoatSavedInfo - Size Int 0
+		FleetSizeInfo - Size Int 0
+		PlayerDamageInfo - Size Int 0
+		SinglePlayer Points Int 0
+	}
+	SinglePlayerVictoryPoints Int 0
+	SinglePlayerCrewList - Size Int 0
+	SinglePlayerArmsList - Size Int 0
+	00000014 HUD
+	{
+		Are NIS Bars Open Bool False 
+		Skip Current Speech Event Bool False 
+		00000001 Active Speech Event Timer
+		{
+			StartTime Double 0
+		}
+		Speech Event Active Bool False 
+		Speech Event Queue - Size Int 0
+		Artificial Pause Between Speech Events Active Bool False 
+		00000001 Artificial Pause Between Speech Events Timer
+		{
+			StartTime Double 0
+		}
+		Request To Close NIS Bars Bool False 
+	}
+	Game Complete Bool False 
+	Custom Game Complete Bool False 
+	00000001 Game Complete Timer
+	{
+		StartTime Double 0
+	}
+	Custom Game Complete String String ''
+	Game Winner Players - Size Int 0
+	User Interface Disabled Bool False 
+	Is Campaign Game Bool False 
+	Show Stats Screen Bool True
+	Goto Next Level Enabled Bool False 
+	Next Level World Name String ''
+	00000001 Next Level Display Timer
+	{
+		StartTime Double 0
+	}
+	Already Created Game Bool False 
+	00000218 Game Camera
+	{
+		00000028 FlyCameraController
+		{
+			00000015 Camera
+			{
+				AspectRatio Float 1.000000
+				FieldOfView Float 0.785398
+				NearPlane Float 0.500000
+				FarPlane Float 3000.000000
+				UsingResolutionBasedAspectRatio Bool True
+				Orthographic Bool False 
+				OrthographicZoom Float 1.000000
+				00000005 LocalBasis
+				{
+					Position Vector3( 0.000000, 0.000000, 0.000000 )
+					LookAt Vector Length Float 1.000000
+					Orientation - Cross Vector3( 1.000000, 0.000000, 0.000000 )
+					Orientation - Forward Vector3( 0.000000, 1.000000, 0.000000 )
+					Orientation - Up Vector3( 0.000000, 0.000000, 1.000000 )
+				}
+			}
+			00000002 TargetInfo
+			{
+				TargetID Int -1
+				TargetPoint Vector3( 0.000000, 0.000000, 0.000000 )
+			}
+			00000001 GameTimeUpdateTimer
+			{
+				StartTime Double 0
+			}
+			NewFocusData Bool True
+		}
+		00000046 SplineCameraController
+		{
+			00000015 Camera
+			{
+				AspectRatio Float 1.000000
+				FieldOfView Float 0.785398
+				NearPlane Float 0.500000
+				FarPlane Float 3000.000000
+				UsingResolutionBasedAspectRatio Bool True
+				Orthographic Bool False 
+				OrthographicZoom Float 1.000000
+				00000005 LocalBasis
+				{
+					Position Vector3( 0.000000, 0.000000, 0.000000 )
+					LookAt Vector Length Float 10.000000
+					Orientation - Cross Vector3( -1.000000, 0.000000, 0.000000 )
+					Orientation - Forward Vector3( 0.000000, -1.000000, 0.000000 )
+					Orientation - Up Vector3( 0.000000, 0.000000, 1.000000 )
+				}
+			}
+			00000002 TargetInfo
+			{
+				TargetID Int -1
+				TargetPoint Vector3( 0.000000, 0.000000, 0.000000 )
+			}
+			00000001 GameTimeUpdateTimer
+			{
+				StartTime Double 0
+			}
+			NewFocusData Bool True
+			00000010 PositionInterpolater
+			{
+				Position Vector3( 0.000000, 0.000000, 0.000000 )
+				StartPointControlPoint Vector3( 0.000000, 0.000000, 0.000000 )
+				EndPointControlPoint Vector3( 0.000000, 0.000000, 0.000000 )
+				ControlIndex Int 0
+				Acceleration Float 10.000000
+				MaxSpeed Float 30.000000
+				Speed Float 0.000000
+				Distance Float 0.000000
+				Percentage Float -431602080.000000
+				ControlPointsInfo - Size Int 0
+			}
+			PrevTargetPoint Vector3( 0.000000, -10.000000, 0.000000 )
+			LockPosition Bool False 
+			LockOrientation Bool False 
+			ForceOrientation Bool False 
+			PercentIncrement Float -431602080.000000
+		}
+		00000042 SwoopCameraController
+		{
+			00000015 Camera
+			{
+				AspectRatio Float 1.000000
+				FieldOfView Float 0.785398
+				NearPlane Float 0.500000
+				FarPlane Float 3000.000000
+				UsingResolutionBasedAspectRatio Bool True
+				Orthographic Bool False 
+				OrthographicZoom Float 1.000000
+				00000005 LocalBasis
+				{
+					Position Vector3( 0.000000, 0.000000, 0.000000 )
+					LookAt Vector Length Float 10.000000
+					Orientation - Cross Vector3( -1.000000, 0.000000, 0.000000 )
+					Orientation - Forward Vector3( 0.000000, -1.000000, 0.000000 )
+					Orientation - Up Vector3( 0.000000, 0.000000, 1.000000 )
+				}
+			}
+			00000002 TargetInfo
+			{
+				TargetID Int -1
+				TargetPoint Vector3( 0.000000, 0.000000, 0.000000 )
+			}
+			00000001 GameTimeUpdateTimer
+			{
+				StartTime Double 0
+			}
+			NewFocusData Bool True
+			DistanceToTarget Float 20.000000
+			DesiredToTarget Float 20.000000
+			HorizontalRotation Float 0.000000
+			MaxHorizontalRotation Float 0.000000
+			MaxDistanceToTarget Float 300.000000
+			MinHorizontalRotation Float 0.000000
+			MinDistanceToTarget Float 2.000000
+			RestrictMinHorizontal Bool False 
+			RestrictMinDistance Bool True
+			RestrictMaxHorizontal Bool False 
+			RestrictMaxDistance Bool True
+			PercentIncrement Float -431602080.000000
+			TargetPoint Vector3( 0.000000, 0.000000, 0.000000 )
+			JumpToFocusPoint Bool False 
+		}
+		00000046 TransitionCameraController
+		{
+			00000015 Camera
+			{
+				AspectRatio Float 1.000000
+				FieldOfView Float 0.785398
+				NearPlane Float 0.500000
+				FarPlane Float 3000.000000
+				UsingResolutionBasedAspectRatio Bool True
+				Orthographic Bool False 
+				OrthographicZoom Float 1.000000
+				00000005 LocalBasis
+				{
+					Position Vector3( 0.000000, 0.000000, 0.000000 )
+					LookAt Vector Length Float 10.000000
+					Orientation - Cross Vector3( -1.000000, 0.000000, 0.000000 )
+					Orientation - Forward Vector3( 0.000000, -1.000000, 0.000000 )
+					Orientation - Up Vector3( 0.000000, 0.000000, 1.000000 )
+				}
+			}
+			00000002 TargetInfo
+			{
+				TargetID Int -1
+				TargetPoint Vector3( 0.000000, 0.000000, 0.000000 )
+			}
+			00000001 GameTimeUpdateTimer
+			{
+				StartTime Double 0
+			}
+			NewFocusData Bool True
+			00000010 PositionInterpolater
+			{
+				Position Vector3( 0.000000, 0.000000, 0.000000 )
+				StartPointControlPoint Vector3( 0.000000, 0.000000, 0.000000 )
+				EndPointControlPoint Vector3( 0.000000, 0.000000, 0.000000 )
+				ControlIndex Int 0
+				Acceleration Float 10.000000
+				MaxSpeed Float 30.000000
+				Speed Float 0.000000
+				Distance Float 0.000000
+				Percentage Float -431602080.000000
+				ControlPointsInfo - Size Int 0
+			}
+			PrevTargetPoint Vector3( 0.000000, -10.000000, 0.000000 )
+			LockPosition Bool False 
+			LockOrientation Bool False 
+			ForceOrientation Bool False 
+			PercentIncrement Float -431602080.000000
+		}
+		00000034 AttachCameraController
+		{
+			00000015 Camera
+			{
+				AspectRatio Float 1.000000
+				FieldOfView Float 0.785398
+				NearPlane Float 0.500000
+				FarPlane Float 3000.000000
+				UsingResolutionBasedAspectRatio Bool True
+				Orthographic Bool False 
+				OrthographicZoom Float 1.000000
+				00000005 LocalBasis
+				{
+					Position Vector3( 0.000000, 0.000000, 0.000000 )
+					LookAt Vector Length Float 10.000000
+					Orientation - Cross Vector3( -1.000000, 0.000000, 0.000000 )
+					Orientation - Forward Vector3( 0.000000, -1.000000, 0.000000 )
+					Orientation - Up Vector3( 0.000000, 0.000000, 1.000000 )
+				}
+			}
+			00000002 TargetInfo
+			{
+				TargetID Int -1
+				TargetPoint Vector3( 0.000000, 0.000000, 0.000000 )
+			}
+			00000001 GameTimeUpdateTimer
+			{
+				StartTime Double 0
+			}
+			NewFocusData Bool True
+			AttachedObjectID Int -1
+			Distance Float 1.000000
+			AngleYZ Float 0.000000
+			AngleXY Float 0.000000
+			LockOrientation Bool False 
+			PercentIncrement Float -431602080.000000
+		}
+		CameraMode Int 0
+		TargetModeForTransition Int -842150451
+		InTransitionMode Bool False 
+		TurnOffNISWhenDoneTransition Bool True
+		TransitionStartPoint Vector3( 0.000000, 0.000000, 0.000000 )
+		LastTargetPosition Vector3( 0.000000, 0.000000, 0.000000 )
+		LastCameraPosition Vector3( 0.000000, 0.000000, 0.000000 )
+	}
+	00000018 SoundPlayer
+	{
+		00000006 CurrentMix
+		{
+			PercentageVolume Float 1.000000
+			PercentageVolume Float 1.000000
+			PercentageVolume Float 1.000000
+			PercentageVolume Float 1.000000
+			PercentageVolume Float 1.000000
+			PercentageVolume Float 1.000000
+		}
+		00000006 UserMix
+		{
+			PercentageVolume Float 1.000000
+			PercentageVolume Float 1.000000
+			PercentageVolume Float 1.000000
+			PercentageVolume Float 1.000000
+			PercentageVolume Float 1.000000
+			PercentageVolume Float 1.000000
+		}
+	}
+	00000001 MusicPlayer
+	{
+		Is Playing Bool False 
+	}
+	00000005 TPSound
+	{
+		MusicVolume Float 1.000000
+		SpeechOcurring Bool False 
+		CreatedSoundData - Size Int 0
+		Abyss Volume Float 0.000000
+		Inside Abyss Bool False 
+	}
+	Radar Active Bool True
+	Crew Speech Silent State Bool False 
+}
