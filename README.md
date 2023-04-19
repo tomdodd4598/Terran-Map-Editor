@@ -9,7 +9,7 @@ A program for editing and creating world maps for [Treasure Planet: Battle at Pr
 
 If you are interested in mods, lore and other projects related to the game, be sure to check out the [Etherium Forces Discord server](https://discord.gg/drQNME8)!
 
-**Java 11+ required!**
+**Java 17+ required!**
 
 
 Permissions
