@@ -1,9 +1,11 @@
+import org.jetbrains.compose.desktop.application.dsl.TargetFormat
+
 plugins {
-    kotlin("multiplatform") version "1.8.+"
-    id("org.jetbrains.compose") version "1.4.+"
+    kotlin("multiplatform")
+    id("org.jetbrains.compose")
 }
 
-group = "com.dodd"
+group = "dodd"
 version = "1.0"
 
 repositories {
@@ -33,7 +35,7 @@ compose.desktop {
     application {
         mainClass = "dodd.MainKt"
         nativeDistributions {
-            //targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "TerranMapEditor"
             packageVersion = "1.0.0"
         }

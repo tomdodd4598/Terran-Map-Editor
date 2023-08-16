@@ -1,1 +1,1 @@
-gradlew packageUberJarForCurrentOS
+gradlew packageReleaseUberJarForCurrentOS
